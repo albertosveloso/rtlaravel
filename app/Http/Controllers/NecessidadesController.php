@@ -29,14 +29,12 @@ class NecessidadesController extends Controller
     
     public function store(NecessidadeRequest $request)
     {
-        //@todo 02-10-2015 13:33
+        //@todo 02-10-2015 13:33       
         $this->necessidade->create($request->all());
-
-        $this->necessidade->projetos()->add($request->input('projeto_selec'));
-
+        //$this->necessidade->projetos()->add($request->input('projeto_selec'));
         return redirect()->route('necessidades.index');
-     
+
         
     }
-   
+
 }
